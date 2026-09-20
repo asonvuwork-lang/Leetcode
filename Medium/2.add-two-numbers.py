@@ -15,21 +15,26 @@ class Solution:
         num1 = ""
         num2 = ""
 
-        for x in range(len(l1),0,-1):
-            num1 += l1[x]
-        for x in range(len(l2),0,-1):
-            num2 += l2[x]
+        while l1!= None:
+            num1 += str(l1.val)
+            l1 = l1.next
+        
+        while l2 != None:
+            num2 += str(l2.val)
+            l2 = l2.next
+        
+        num1 = num1[::-1]
+        num2 = num2[::-1]
 
         result = int(num1) + int(num2)
         result = str(result)[::-1]
+        LR = ListNode()
+        current = LR
+        for x in range(len(result)):
+            current.next = ListNode(int(result[x]))
+            current = current.next
 
-        resultList = ListNode()
-        for x in range(1,len(result)):
-            resultList.val(result[x])
-            resultList.next()
-
-        return resultList
-
+        return LR.next
 
             
 # @lc code=end
