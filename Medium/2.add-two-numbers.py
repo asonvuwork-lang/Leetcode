@@ -6,10 +6,10 @@
 
 # @lc code=start
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
         num1 = ""
@@ -35,7 +35,5 @@ class Solution:
             current = current.next
 
         return LR.next
-
-            
 # @lc code=end
 
